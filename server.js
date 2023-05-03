@@ -4,10 +4,10 @@
  const io = require('socket.io')(http);
  const path = require('path');
  //serve  public directory
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'')));
  
 app.get('/', (req,resp) => {
-    resp.sendFile(path.join(__dirname, + 'public/index.html'))
+    resp.sendFile(path.join(__dirname, + 'index.html'))
 });
 
 io.on('connection', socket =>  {
